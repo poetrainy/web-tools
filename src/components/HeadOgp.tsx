@@ -12,19 +12,16 @@ const HeadOgp: FC = () => {
       <Helmet>
         <title>{PROJECT_NAME}</title>
       </Helmet>
-      <meta property="og:title" content={PROJECT_NAME} />
-      <meta property="og:url" content={PROJECT_URL} />
-
-      {/* 説明 */}
-      <meta property="og:description" content={PROJECT_DESCRIPTION} />
+      <meta property={"og:title"} content={PROJECT_NAME} />
+      <meta property={"og:url"} content={PROJECT_URL} />
+      <meta property={"og:description"} content={PROJECT_DESCRIPTION} />
       {/* ページの種類 */}
-      <meta property="og:type" content="website" />
+      <meta property={"og:type"} content={"website"} />
       {/* サイト名 */}
-      <meta property="og:site_name" content={PROJECT_NAME} />
+      <meta property={"og:site_name"} content={PROJECT_NAME} />
       {/* サムネイル画像の URL */}
-      <meta property="og:image" content="img/icon.png" />
-      <meta name="twitter:card" content="summary" />
-      <link rel="icon" href="img/icon.png" />
+      <meta name={"twitter:card"} content={"summary"} />
+      <meta name="apple-mobile-web-app-title" content={PROJECT_NAME} />
     </>
   );
 };
