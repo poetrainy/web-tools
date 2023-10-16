@@ -30,7 +30,7 @@ const CharacterCounter: FC = () => {
           value={characters}
           onChange={(e) => setCharacters(e.target.value)}
           placeholder="Enter characters"
-          h="400px"
+          h="240px"
           fontSize="16px"
         />
       </VStack>
