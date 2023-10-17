@@ -1,27 +1,36 @@
 import { FC } from "react";
-import { Helmet } from "react-helmet";
-import {
-  PROJECT_NAME,
-  PROJECT_DESCRIPTION,
-  PROJECT_URL,
-} from "~/constants/common";
+import { Helmet } from "react-helmet-async";
+import { APP_DESCRIPTION, APP_NAME, APP_URL } from "~/constants/common";
+import { OgpType } from "~/types/common";
 
-const HeadOgp: FC = () => {
+type Props = {
+  ogp?: OgpType;
+};
+
+const HeadOgp: FC<Props> = ({ ogp }) => {
   return (
     <>
       <Helmet>
-        <title>{PROJECT_NAME}</title>
+        <title>{`${ogp ? ogp.name + "｜" : ""}${APP_NAME}`}</title>
+        <meta
+          property={"og:title"}
+          content={`${ogp ? ogp.name + "｜" : ""}${APP_NAME}`}
+        />
+        <meta
+          property={"og:url"}
+          content={`${APP_URL}${ogp ? ogp.path : ""}`}
+        />
+        <meta
+          property={"og:description"}
+          content={ogp ? ogp.description : APP_DESCRIPTION}
+        />
+        {/* ページの種類 */}
+        <meta property={"og:type"} content={"website"} />
+        {/* サイト名 */}
+        <meta property={"og:site_name"} content={APP_NAME} />
+        {/* サムネイル画像の URL */}
+        <meta name={"twitter:card"} content={"summary"} />
       </Helmet>
-      <meta property={"og:title"} content={PROJECT_NAME} />
-      <meta property={"og:url"} content={PROJECT_URL} />
-      <meta property={"og:description"} content={PROJECT_DESCRIPTION} />
-      {/* ページの種類 */}
-      <meta property={"og:type"} content={"website"} />
-      {/* サイト名 */}
-      <meta property={"og:site_name"} content={PROJECT_NAME} />
-      {/* サムネイル画像の URL */}
-      <meta name={"twitter:card"} content={"summary"} />
-      <meta name="apple-mobile-web-app-title" content={PROJECT_NAME} />
     </>
   );
 };
