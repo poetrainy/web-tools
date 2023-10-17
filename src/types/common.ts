@@ -1,4 +1,4 @@
-export type OgpType = {
+export type ProjectInformationType = {
   name: string;
   description: string;
   path: string;

@@ -2,12 +2,12 @@ import { FC } from "react";
 import { VStack, Heading } from "@chakra-ui/react";
 import Footer from "~/components/Footer";
 import HeadOgp from "~/components/HeadOgp";
-import { OgpType } from "~/types/common";
+import { ProjectInformationType } from "~/types/common";
 
 type Props = {
   children: JSX.Element;
   heading: string;
-  ogp?: OgpType;
+  ogp?: ProjectInformationType;
 };
 
 const Layout: FC<Props> = ({ children, heading, ogp }) => {

@@ -7,7 +7,10 @@ const CharacterCounter: FC = () => {
   const [characters, setCharacters] = useState<string>("");
 
   return (
-    <Layout heading="Character counter" ogp={PROJECT_CHARACTER_COUNTER}>
+    <Layout
+      heading={PROJECT_CHARACTER_COUNTER.name}
+      ogp={PROJECT_CHARACTER_COUNTER}
+    >
       <VStack as="main" alignItems="stretch" p="0">
         <HStack justifyContent="space-between">
           <Flex gap="4px">

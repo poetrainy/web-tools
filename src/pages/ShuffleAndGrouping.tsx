@@ -97,16 +97,17 @@ const ShuffleAndGrouping: FC = () => {
   ];
 
   return (
-    <Layout heading="Shuffle and grouping" ogp={PROJECT_SHUFFLE_AND_GROUPING}>
+    <Layout
+      heading={PROJECT_SHUFFLE_AND_GROUPING.name}
+      ogp={PROJECT_SHUFFLE_AND_GROUPING}
+    >
       <VStack as="main" alignItems="stretch" gap="20px" p="0">
         <Text>
           To enter multiple users or groups, separate them with `,` or `、`.
         </Text>
         {elements.map((element) => (
           <VStack key={element.heading} alignItems="stretch" gap="8px" p="0">
-            {element.heading && (
-              <Heading fontSize="18px">{element.heading}</Heading>
-            )}
+            {element.heading && <Heading size="sm">{element.heading}</Heading>}
             {element.component}
           </VStack>
         ))}

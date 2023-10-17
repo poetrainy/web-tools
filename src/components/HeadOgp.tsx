@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { Helmet } from "react-helmet-async";
 import { APP_DESCRIPTION, APP_NAME, APP_URL } from "~/constants/common";
-import { OgpType } from "~/types/common";
+import { ProjectInformationType } from "~/types/common";
 
 type Props = {
-  ogp?: OgpType;
+  ogp?: ProjectInformationType;
 };
 
 const HeadOgp: FC<Props> = ({ ogp }) => {
