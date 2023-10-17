@@ -13,23 +13,17 @@ const HeadOgp: FC<Props> = ({ ogp }) => {
       <Helmet>
         <title>{`${ogp ? ogp.name + "｜" : ""}${APP_NAME}`}</title>
         <meta
-          property={"og:title"}
+          property="og:title"
           content={`${ogp ? ogp.name + "｜" : ""}${APP_NAME}`}
         />
+        <meta property="og:url" content={`${APP_URL}${ogp ? ogp.path : ""}`} />
         <meta
-          property={"og:url"}
-          content={`${APP_URL}${ogp ? ogp.path : ""}`}
-        />
-        <meta
-          property={"og:description"}
+          property="og:description"
           content={ogp ? ogp.description : APP_DESCRIPTION}
         />
-        {/* ページの種類 */}
-        <meta property={"og:type"} content={"website"} />
-        {/* サイト名 */}
-        <meta property={"og:site_name"} content={APP_NAME} />
-        {/* サムネイル画像の URL */}
-        <meta name={"twitter:card"} content={"summary"} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={APP_NAME} />
+        <meta name="twitter:card" content="summary" />
       </Helmet>
     </>
   );
