@@ -1,13 +1,13 @@
 import { FC, useState } from "react";
 import { Button, Flex, HStack, Text, Textarea, VStack } from "@chakra-ui/react";
 import Layout from "~/components/Layout";
-import { PROJECT_NAME } from "~/constants/common";
+import { PROJECT_CHARACTER_COUNTER } from "~/constants/common";
 
 const CharacterCounter: FC = () => {
   const [characters, setCharacters] = useState<string>("");
 
   return (
-    <Layout title={PROJECT_NAME}>
+    <Layout heading="Character counter" ogp={PROJECT_CHARACTER_COUNTER}>
       <VStack as="main" alignItems="stretch" p="0">
         <HStack justifyContent="space-between">
           <Flex gap="4px">

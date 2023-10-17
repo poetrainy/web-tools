@@ -4,13 +4,25 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import {
+  PROJECT_CHARACTER_COUNTER,
+  PROJECT_SHUFFLE_AND_GROUPING,
+} from "~/constants/common";
 import CharacterCounter from "~/pages/CharacterCounter";
+import ShuffleAndGrouping from "~/pages/ShuffleAndGrouping";
 
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route path="/" element={<CharacterCounter />} />
+        <Route
+          path={PROJECT_CHARACTER_COUNTER.path}
+          element={<CharacterCounter />}
+        />
+        <Route
+          path={PROJECT_SHUFFLE_AND_GROUPING.path}
+          element={<ShuffleAndGrouping />}
+        />
       </>
     )
   );
