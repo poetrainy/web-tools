@@ -1,8 +1,8 @@
 import { ProjectInformationType } from "~/types/common";
 
-export const APP_NAME = "web-tools-poetrainy";
+export const APP_NAME = "poetrainy-web-tools";
 export const APP_DESCRIPTION = "Web tools created by poetrainy.";
-export const APP_URL = "https://web-tools-poetrainy.vercel.app";
+export const APP_URL = "https://poetrainy-web-tools.vercel.app";
 
 export const PROJECT_CHARACTER_COUNTER: ProjectInformationType = {
   name: "Character counter",
